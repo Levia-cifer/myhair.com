@@ -3,201 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyHair - Premium Hair Salon</title>
+  <title>MyHair - Premium Professional Hair Services</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav>
+  <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <img src="video/image/Millie/Millie/photo_2025-12-09_19-27-42.jpg" alt="My Hair Dot Com Logo" class="logo-img">
-        <span>My Hair Dot Com</span>
+        <span class="logo-text">MyHair</span>
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#stylists">Stylists</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#videos">Videos</a></li>
+        <li><a href="#results">Results</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="theme-control">
+      <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">🌙</button>
-        <span class="theme-indicator" id="theme-indicator">Light</span>
+        <button class="mobile-toggle">☰</button>
       </div>
-      <button class="mobile-toggle">☰</button>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <!-- Decorative Elements -->
-    <div class="hero-decor hero-decor-1">✂️</div>
-    <div class="hero-decor hero-decor-2">💇</div>
-    <div class="hero-decor hero-decor-3">💅</div>
-    <div class="hero-decor hero-decor-4">🎨</div>
-
+  <section id="home" class="hero-section">
     <div class="hero-content">
-      <h1 class="gradient-text">Transform Your Hair, Transform Yourself</h1>
-      <p>Experience premium hair care with our expert stylists at affordable prices</p>
-      <div class="hero-buttons">
-        <button class="btn btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
-          Explore Services
-        </button>
-        <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          Get in Touch
-        </button>
+      <div class="hero-text">
+        <h1>Transform Your Hair, Transform Your Confidence</h1>
+        <p class="hero-subtitle">Professional hair services trusted by over 500+ satisfied clients. Expert stylists with years of dermatological knowledge.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+            Explore Services
+          </button>
+          <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Book Appointment
+          </button>
+        </div>
+        <p class="hero-badge">✓ #1 Salon in Takoradi | 5★ Average Rating | 128+ Reviews</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/hero-styling.jpg" alt="Professional hair transformation" class="hero-img">
       </div>
     </div>
-    <div class="hero-floating-bg"></div>
   </section>
 
-  <!-- Quick Stats -->
-  <section id="stats" class="stats-section">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Happy Customers</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">4</div>
-        <div class="stat-label">Expert Stylists</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">6</div>
-        <div class="stat-label">Premium Services</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">5★</div>
-        <div class="stat-label">Average Rating</div>
+  <!-- Trust Section -->
+  <section class="trust-section">
+    <div class="container">
+      <h2>Why Choose MyHair?</h2>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">💎</div>
+          <h3>Premium Quality</h3>
+          <p>FDA-approved professional-grade products and techniques</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">👥</div>
+          <h3>Expert Stylists</h3>
+          <p>Certified professionals with 10+ years of experience</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">⚡</div>
+          <h3>Quick Service</h3>
+          <p>Efficient treatments without compromising quality</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">✨</div>
+          <h3>Proven Results</h3>
+          <p>Real testimonials from 500+ satisfied customers</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services">
-    <div class="section-container">
+  <section id="services" class="services-section">
+    <div class="container">
       <h2>Our Services</h2>
-      <p class="section-subtitle">Choose from our range of premium hair services</p>
+      <p class="section-subtitle">Professional hair care solutions tailored to your needs</p>
       
-      <div id="service-filters" class="filter-container"></div>
-      
-      <div id="services-grid" class="grid"></div>
+      <div id="services-grid" class="services-grid"></div>
     </div>
   </section>
 
-  <!-- Stylists Section -->
-  <section id="stylists">
-    <div class="section-container">
-      <h2>Meet Our Stylists</h2>
-      <p class="section-subtitle">Our team of experienced and passionate professionals</p>
+  <!-- Results Section with Testimonials -->
+  <section id="results" class="results-section">
+    <div class="container">
+      <h2>Real People, Real Results</h2>
+      <p class="section-subtitle">See transformations from our clients</p>
       
-      <div id="stylists-grid" class="grid"></div>
+      <div class="testimonials-carousel">
+        <div id="testimonials-grid" class="testimonials-grid"></div>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <div class="section-container">
-      <h2>Our Work</h2>
-      <p class="section-subtitle">Browse our latest transformations and creations</p>
+  <!-- Meet the Stylists -->
+  <section class="stylists-section">
+    <div class="container">
+      <h2>Meet Our Expert Team</h2>
+      <p class="section-subtitle">Professional stylists dedicated to your hair health</p>
       
-      <div id="gallery-filters" class="filter-container"></div>
-      
-      <div id="gallery-grid" class="grid"></div>
+      <div id="stylists-grid" class="stylists-grid"></div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section id="why-choose" class="why-choose-section">
-    <div class="section-container">
-      <h2 class="white-heading">Why Choose MyHair?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">💎</div>
-          <h3>Premium Quality</h3>
-          <p>We use only the finest hair care products and techniques</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">👥</div>
-          <h3>Expert Team</h3>
-          <p>All our stylists are certified with 10+ years of experience</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Quick Service</h3>
-          <p>Efficient service without compromising on quality</p>
-        </div>
+  <!-- Free Hair Quiz CTA -->
+  <section class="quiz-cta-section">
+    <div class="container">
+      <h2>Find Your Perfect Hair Treatment</h2>
+      <p>Take our free hair assessment to discover the best services for your unique needs</p>
+      <button class="btn btn-primary btn-large" onclick="alert('Hair assessment quiz coming soon!')">
+        Take Free Hair Quiz
+      </button>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Get exclusive tips, special offers, and hair care advice delivered to your inbox</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+          <input type="email" placeholder="Enter your email" required class="newsletter-input">
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <div class="section-container">
-      <div class="about-grid">
-        <div class="about-content">
-          <h2>About My Hair Dot Com</h2>
-          <p class="about-text">
-            My Hair Dot Com is your premier destination for professional hair services in Takoradi. Our mission is to provide premium hair care and styling services with expertise, passion, and affordability. We're committed to transforming your hair and boosting your confidence.
-          </p>
-          <p class="about-text">
-            We believe that great hair starts with great care. Our experienced team is dedicated to understanding your unique hair needs and providing personalized solutions that make you look and feel amazing.
-          </p>
-          <div class="about-buttons">
-            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
-            <button class="btn btn-secondary" onclick="alert('Call us at (555) 123-4567')">Call Us</button>
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About MyHair</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>MyHair is your premier destination for professional hair services in Takoradi. Founded on principles of excellence and care, we combine scientific approach with artistic expertise.</p>
+          <p>Our mission is to provide premium, salon-quality hair care that restores confidence and promotes healthy hair growth. We're committed to using only the finest professional-grade products and techniques.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Expert Stylists</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Services</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">5★</div>
+              <div class="stat-label">Rating</div>
+            </div>
           </div>
         </div>
-        <div class="about-image">💇‍♀️</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Videos Section -->
-  <section id="videos" class="videos-section">
-    <div class="section-container">
-      <h2 class="white-heading">Video Gallery</h2>
-      <p class="section-subtitle video-subtitle">Watch our stylists in action - see the transformation magic happen</p>
-      
-      <div class="video-player-container">
-        <div class="video-player" id="main-video-player">
-          <video id="main-video">
-            <source src="video/image/Millie/Millie/VID-20251209-WA0146.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-controls">
-            <button class="video-btn" id="play-btn" title="Play/Pause">▶</button>
-            <div class="progress-bar" id="progress-bar">
-              <div class="progress-fill" id="progress-fill"></div>
-            </div>
-            <span class="time-display"><span id="current-time">0:00</span> / <span id="duration">0:00</span></span>
-            <div class="volume-control">
-              <button class="video-btn" id="volume-btn" title="Mute">🔊</button>
-              <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="100" title="Volume">
-            </div>
-            <button class="video-btn fullscreen-btn" id="fullscreen-btn" title="Fullscreen">⛶</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="more-videos-section">
-        <h3>📹 More Videos</h3>
-        <div class="video-grid" id="video-grid"></div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <div class="section-container">
+  <section id="contact" class="contact-section">
+    <div class="container">
       <h2>Get in Touch</h2>
-      <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+      <p class="section-subtitle">Book your appointment or send us a message</p>
       
       <div class="contact-grid">
-        <form onsubmit="handleContactForm(event)" class="contact-form">
+        <form class="contact-form" onsubmit="handleContactForm(event)">
           <input type="text" placeholder="Your Name" required class="form-input">
           <input type="email" placeholder="Your Email" required class="form-input">
           <input type="tel" placeholder="Your Phone" required class="form-input">
@@ -216,8 +192,13 @@
           </div>
           <div class="info-card">
             <h3>📧 Email</h3>
-            <p>myhairdotcom@gmaildotcom</p>
+            <p>myhairdotcom@gmail.com</p>
           </div>
+          <div class="info-card">
+            <h3>🕐 Hours</h3>
+            <p>Mon - Sat: 9AM - 6PM<br>Sunday: By Appointment</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -225,14 +206,35 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <p class="footer-copyright">© 2025 My Hair Dot Com. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#results">Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://twitter.com">Twitter</a>
+          </div>
+        </div>
       </div>
-      <p class="footer-credit">Made with 💖 by My Hair Dot Com Team</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MyHair. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+      </div>
     </div>
   </footer>
 
