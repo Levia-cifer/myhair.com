@@ -1,4 +1,12 @@
-node_modules/
+# 1) Is git available?
+git --version
+
+# 2) Is there already a .git folder?
+Set-Location "C:\Users\MY DELL LAPTOP 5\Downloads\MyHair.com"
+Get-ChildItem -Force | Where-Object { $_.Name -eq '.git' } | Format-List
+
+# 3) Show current folder path (confirm you are in correct folder)
+pwdnode_modules/
 .env
 .env.local
 .env.*.local

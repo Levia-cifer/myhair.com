@@ -9,18 +9,18 @@ const services = [
 ];
 
 const stylists = [
-  { id: 1, name: 'Sarah Johnson', rating: 4.9, reviews: 128, emoji: '👩‍🦱', specialties: 'Color, Styling' },
-  { id: 2, name: 'Maria Garcia', rating: 4.8, reviews: 95, emoji: '👩', specialties: 'Cutting, Color' },
-  { id: 3, name: 'Jessica Lee', rating: 5.0, reviews: 76, emoji: '👩‍🦳', specialties: 'All Services' },
-  { id: 4, name: 'Emma Wilson', rating: 4.7, reviews: 112, emoji: '👩', specialties: 'Braiding, Styling' },
+  { id: 1, name: 'Sarah Johnson', rating: 4.9, reviews: 128, emoji: '👩‍🦱', image: 'assets/images/stylist-1.jpg', specialties: 'Color, Styling' },
+  { id: 2, name: 'Maria Garcia', rating: 4.8, reviews: 95, emoji: '👩', image: 'assets/images/stylist-2.jpg', specialties: 'Cutting, Color' },
+  { id: 3, name: 'Jessica Lee', rating: 5.0, reviews: 76, emoji: '👩‍🦳', image: 'assets/images/stylist-3.jpg', specialties: 'All Services' },
+  { id: 4, name: 'Emma Wilson', rating: 4.7, reviews: 112, emoji: '👩', image: 'assets/images/stylist-4.jpg', specialties: 'Braiding, Styling' },
 ];
 
 const gallery = [
-  { id: 2, title: 'Summer Color', emoji: '☀️', category: 'color' },
-  { id: 3, title: 'Curly Waves', emoji: '〰️', category: 'styling' },
-  { id: 4, title: 'Bold Pixie', emoji: '⚡', category: 'cutting' },
-  { id: 5, title: 'Balayage', emoji: '🎨', category: 'color' },
-  { id: 6, title: 'Festival Braids', emoji: '✨', category: 'styling' },
+  { id: 2, title: 'Summer Color', emoji: '☀️', image: 'assets/images/hero-styling.jpg', category: 'color' },
+  { id: 3, title: 'Curly Waves', emoji: '〰️', image: 'assets/images/hero-styling.jpg', category: 'styling' },
+  { id: 4, title: 'Bold Pixie', emoji: '⚡', image: 'assets/images/gallery-cutting.jpg', category: 'cutting' },
+  { id: 5, title: 'Balayage', emoji: '🎨', image: 'assets/images/hero-styling.jpg', category: 'color' },
+  { id: 6, title: 'Festival Braids', emoji: '✨', image: 'assets/images/hero-styling.jpg', category: 'styling' },
 ];
 
 const videos = [
@@ -76,7 +76,7 @@ function renderStylists() {
   const container = document.getElementById('stylists-grid');
   container.innerHTML = stylists.map(stylist => `
     <div class="card" data-stylist-id="${stylist.id}">
-      <canvas class="card-img-canvas" data-emoji="${stylist.emoji}" width="400" height="200"></canvas>
+      <img src="${stylist.image}" alt="${stylist.name}" class="card-img-canvas" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22%3E${stylist.emoji}%3C/text%3E%3C/svg%3E'">
       <h3>${stylist.name}</h3>
       <p>${stylist.specialties}</p>
       <div class="card-meta">
@@ -88,8 +88,6 @@ function renderStylists() {
 
   document.querySelectorAll('#stylists-grid .card').forEach((card, idx) => {
     card.style.animation = `staggerIn ${0.8 + idx * 0.1}s ease-out`;
-    const canvas = card.querySelector('.card-img-canvas');
-    if (canvas) generateEmojiPreview(canvas, canvas.getAttribute('data-emoji') || '👩');
   });
 }
 
@@ -105,17 +103,14 @@ function updateGalleryFilter(category) {
   
   container.innerHTML = filtered.map(item => `
     <div class="card" style="cursor: pointer;" onclick="viewGalleryItem(${item.id})">
-      <canvas class="card-img-canvas" data-emoji="${item.emoji}" width="400" height="200"></canvas>
+      <img src="${item.image}" alt="${item.title}" class="card-img-canvas" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22%3E${item.emoji}%3C/text%3E%3C/svg%3E'">
       <h3>${item.title}</h3>
       <p style="font-size: 0.85rem; color: #999;">${item.category}</p>
     </div>
   `).join('');
 
-  // generate previews for gallery canvases
   document.querySelectorAll('#gallery-grid .card').forEach((card, idx) => {
     card.style.animation = `staggerIn ${0.8 + idx * 0.1}s ease-out`;
-    const canvas = card.querySelector('.card-img-canvas');
-    if (canvas) generateEmojiPreview(canvas, canvas.getAttribute('data-emoji') || '📸');
   });
 }
 
