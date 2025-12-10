@@ -34,9 +34,6 @@ body.dark-mode {
   --white: #1a1a1a;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.7);
-}
-
-body.dark-mode {
   background: #0a0a0a;
   color: #e8e8e8;
   transition: background 0.3s ease, color 0.3s ease;
@@ -135,10 +132,14 @@ body {
 .hero-section {
   margin-top: 80px;
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.65) 0%, rgba(0, 168, 255, 0.65) 100%),
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
+  background-color: #0066cc;
+  background-image: 
+    linear-gradient(135deg, rgba(0, 102, 204, 0.65) 0%, rgba(0, 168, 255, 0.65) 100%),
+    url('https://i.pinimg.com/736x/74/cb/35/74cb35caad63c32e1d5b1d36640646c6.jpg');
   background-attachment: fixed;
-  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   position: relative;
   min-height: 500px;
@@ -254,10 +255,14 @@ body {
 /* TRUST SECTION */
 .trust-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    url('https://i.pinimg.com/736x/98/2f/08/982f086129b2d4d034db79774ac2f10d.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .trust-section h2 {
@@ -309,10 +314,14 @@ body {
 /* SERVICES SECTION */
 .services-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+    url('https://i.pinimg.com/736x/90/55/01/9055010344d2f6222685a6485502cebd.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .services-section h2,
@@ -372,10 +381,14 @@ body {
 /* RESULTS SECTION */
 .results-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
-              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=90') center/cover;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
+    url('https://i.pinimg.com/736x/19/28/31/192831fa43d36b89bc44b060a4b2f9dc.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .testimonials-grid {
@@ -413,10 +426,14 @@ body {
 /* STYLISTS SECTION */
 .stylists-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
-              url('https://images.unsplash.com/photo-1596728241651-7b7ae8fc2f00?w=1200&q=90') center/cover;
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+    url('https://i.pinimg.com/736x/ec/7a/53/ec7a53899425a4ae5e132e997d315088.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .stylists-grid {
@@ -472,10 +489,14 @@ body {
 /* QUIZ CTA SECTION */
 .quiz-cta-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.68) 0%, rgba(0, 168, 255, 0.68) 100%),
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
+  background-color: #0066cc;
+  background-image: 
+    linear-gradient(135deg, rgba(0, 102, 204, 0.68) 0%, rgba(0, 168, 255, 0.68) 100%),
+    url('https://i.pinimg.com/736x/e0/1e/07/e01e077e96ef6a8b34fe80eb8e1295c0.jpg');
   background-attachment: fixed;
-  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   text-align: center;
 }
@@ -494,10 +515,14 @@ body {
 /* NEWSLETTER SECTION */
 .newsletter-section {
   padding: 60px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+    url('https://i.pinimg.com/736x/01/e7/cf/01e7cf0ff4e35c9a856ba50d34fcdef8.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .newsletter-content {
@@ -540,10 +565,14 @@ body {
 /* ABOUT SECTION */
 .about-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
-              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=90') center/cover;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
+    url('https://i.pinimg.com/736x/17/86/3b/17863b0db3440fcdc521b04e84006673.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-content {
@@ -586,10 +615,14 @@ body {
 /* CONTACT SECTION */
 .contact-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+    url('https://i.pinimg.com/736x/ec/7a/53/ec7a53899425a4ae5e132e997d315088.jpg');
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contact-grid {
