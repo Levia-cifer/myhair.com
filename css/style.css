@@ -135,11 +135,13 @@ body {
 .hero-section {
   margin-top: 80px;
   padding: 80px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.65) 0%, rgba(0, 168, 255, 0.65) 100%),
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: multiply;
   color: var(--white);
   position: relative;
+  min-height: 500px;
 }
 
 .hero-section::before {
@@ -149,7 +151,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.8) 0%, rgba(0, 168, 255, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   z-index: 1;
 }
 
@@ -252,9 +254,10 @@ body {
 /* TRUST SECTION */
 .trust-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .trust-section h2 {
@@ -306,9 +309,10 @@ body {
 /* SERVICES SECTION */
 .services-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .services-section h2,
@@ -368,9 +372,10 @@ body {
 /* RESULTS SECTION */
 .results-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), 
-              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
+              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .testimonials-grid {
@@ -408,9 +413,10 @@ body {
 /* STYLISTS SECTION */
 .stylists-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
-              url('https://images.unsplash.com/photo-1596728241651-7b7ae8fc2f00?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+              url('https://images.unsplash.com/photo-1596728241651-7b7ae8fc2f00?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .stylists-grid {
@@ -466,9 +472,10 @@ body {
 /* QUIZ CTA SECTION */
 .quiz-cta-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(0, 102, 204, 0.85), rgba(0, 168, 255, 0.85)), 
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.68) 0%, rgba(0, 168, 255, 0.68) 100%),
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: multiply;
   color: var(--white);
   text-align: center;
 }
@@ -487,9 +494,10 @@ body {
 /* NEWSLETTER SECTION */
 .newsletter-section {
   padding: 60px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
-              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .newsletter-content {
@@ -532,9 +540,10 @@ body {
 /* ABOUT SECTION */
 .about-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), 
-              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.89)),
+              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .about-content {
@@ -577,9 +586,10 @@ body {
 /* CONTACT SECTION */
 .contact-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
-              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background: linear-gradient(rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)),
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=90') center/cover;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .contact-grid {
@@ -766,6 +776,15 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  /* Mobile background optimizations */
+  section {
+    background-attachment: scroll !important;
+  }
+
+  .hero-section {
+    min-height: 400px;
   }
 }
 
