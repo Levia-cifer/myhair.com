@@ -121,8 +121,23 @@ body {
 /* HERO SECTION */
 .hero-section {
   margin-top: 80px;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background-attachment: fixed;
+  color: var(--white);
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.8) 0%, rgba(0, 168, 255, 0.8) 100%);
+  z-index: 1;
 }
 
 .hero-content {
@@ -132,6 +147,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text h1 {
@@ -139,14 +156,16 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: var(--dark);
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 1.125rem;
-  color: var(--text-light);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -158,14 +177,16 @@ body {
 
 .hero-badge {
   font-size: 0.875rem;
-  color: var(--text-light);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image {
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 .hero-img {
@@ -218,7 +239,9 @@ body {
 /* TRUST SECTION */
 .trust-section {
   padding: 80px 20px;
-  background: var(--white);
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .trust-section h2 {
@@ -270,7 +293,9 @@ body {
 /* SERVICES SECTION */
 .services-section {
   padding: 80px 20px;
-  background: var(--light);
+  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .services-section h2,
@@ -330,7 +355,9 @@ body {
 /* RESULTS SECTION */
 .results-section {
   padding: 80px 20px;
-  background: var(--white);
+  background: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), 
+              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .testimonials-grid {
@@ -368,7 +395,9 @@ body {
 /* STYLISTS SECTION */
 .stylists-section {
   padding: 80px 20px;
-  background: var(--light);
+  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
+              url('https://images.unsplash.com/photo-1596728241651-7b7ae8fc2f00?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .stylists-grid {
@@ -424,7 +453,9 @@ body {
 /* QUIZ CTA SECTION */
 .quiz-cta-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(rgba(0, 102, 204, 0.85), rgba(0, 168, 255, 0.85)), 
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background-attachment: fixed;
   color: var(--white);
   text-align: center;
 }
@@ -443,7 +474,9 @@ body {
 /* NEWSLETTER SECTION */
 .newsletter-section {
   padding: 60px 20px;
-  background: var(--light);
+  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
+              url('https://images.unsplash.com/photo-1560066169-04cd0cfd634d?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .newsletter-content {
@@ -486,7 +519,9 @@ body {
 /* ABOUT SECTION */
 .about-section {
   padding: 80px 20px;
-  background: var(--white);
+  background: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), 
+              url('https://images.unsplash.com/photo-1599980388252-f22a8c1d39e5?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .about-content {
@@ -529,7 +564,9 @@ body {
 /* CONTACT SECTION */
 .contact-section {
   padding: 80px 20px;
-  background: var(--light);
+  background: linear-gradient(rgba(248, 249, 250, 0.97), rgba(248, 249, 250, 0.97)), 
+              url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80') center/cover;
+  background-attachment: fixed;
 }
 
 .contact-grid {
