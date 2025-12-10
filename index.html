@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyHair - Premium Hair Salon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="video/image/Millie/Millie/photo_2025-12-09_19-27-42.jpg" alt="My Hair Dot Com Logo" class="logo-img">
+        <span>My Hair Dot Com</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stylists">Stylists</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">🌙</button>
+        <span class="theme-indicator" id="theme-indicator">Light</span>
+      </div>
+      <button class="mobile-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <!-- Decorative Elements -->
+    <div class="hero-decor hero-decor-1">✂️</div>
+    <div class="hero-decor hero-decor-2">💇</div>
+    <div class="hero-decor hero-decor-3">💅</div>
+    <div class="hero-decor hero-decor-4">🎨</div>
+
+    <div class="hero-content">
+      <h1 class="gradient-text">Transform Your Hair, Transform Yourself</h1>
+      <p>Experience premium hair care with our expert stylists at affordable prices</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <button class="btn btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          Explore Services
+        </button>
+        <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Get in Touch
+        </button>
+      </div>
+    </div>
+    <div class="hero-floating-bg"></div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section style="background: linear-gradient(135deg, #ff8c00 0%, #ff6b35 100%); padding: 3rem 1rem; color: white; text-align: center;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">500+</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Happy Customers</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">4</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Expert Stylists</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">6</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Premium Services</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">5★</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Average Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-container">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Choose from our range of premium hair services</p>
+      
+      <div id="service-filters" class="filter-container"></div>
+      
+      <div id="services-grid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- Stylists Section -->
+  <section id="stylists" style="background: #f8f9fa;">
+    <div class="section-container">
+      <h2>Meet Our Stylists</h2>
+      <p class="section-subtitle">Our team of experienced and passionate professionals</p>
+      
+      <div id="stylists-grid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="section-container">
+      <h2>Our Work</h2>
+      <p class="section-subtitle">Browse our latest transformations and creations</p>
+      
+      <div id="gallery-filters" class="filter-container"></div>
+      
+      <div id="gallery-grid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%); color: white; padding: 4rem 1rem;">
+    <div class="section-container" style="color: white;">
+      <h2 style="color: white; text-align: center;">Why Choose MyHair?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💎</div>
+          <h3 style="color: white; margin-bottom: 0.5rem;">Premium Quality</h3>
+          <p style="opacity: 0.9;">We use only the finest hair care products and techniques</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+          <h3 style="color: white; margin-bottom: 0.5rem;">Expert Team</h3>
+          <p style="opacity: 0.9;">All our stylists are certified with 10+ years of experience</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+          <h3 style="color: white; margin-bottom: 0.5rem;">Quick Service</h3>
+          <p style="opacity: 0.9;">Efficient service without compromising on quality</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <h2>About My Hair Dot Com</h2>
+          <p style="line-height: 1.8; color: #666; margin: 1.5rem 0;">
+            My Hair Dot Com is your premier destination for professional hair services in Takoradi. Our mission is to provide premium hair care and styling services with expertise, passion, and affordability. We're committed to transforming your hair and boosting your confidence.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin: 1.5rem 0;">
+            We believe that great hair starts with great care. Our experienced team is dedicated to understanding your unique hair needs and providing personalized solutions that make you look and feel amazing.
+          </p>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
+            <button class="btn btn-secondary" onclick="alert('Call us at (555) 123-4567')">Call Us</button>
+          </div>
+        </div>
+        <div style="font-size: 8rem; text-align: center; opacity: 0.8;">💇‍♀️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%); color: white;">
+    <div class="section-container">
+      <h2 style="color: white; text-align: center;">Video Gallery</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Watch our stylists in action - see the transformation magic happen</p>
+      
+      <div style="margin-top: 2rem; background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 15px;">
+        <div class="video-player" id="main-video-player">
+          <video id="main-video">
+            <source src="video/image/Millie/Millie/VID-20251209-WA0146.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-controls">
+            <button class="video-btn" id="play-btn" title="Play/Pause">▶</button>
+            <div class="progress-bar" id="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="time-display"><span id="current-time">0:00</span> / <span id="duration">0:00</span></span>
+            <div class="volume-control">
+              <button class="video-btn" id="volume-btn" title="Mute" style="background: rgba(168, 85, 247, 0.8);">🔊</button>
+              <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="100">
+            </div>
+            <button class="video-btn fullscreen-btn" id="fullscreen-btn" title="Fullscreen">⛶</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">📹 More Videos</h3>
+        <div class="video-grid" id="video-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: #f8f9fa;">
+    <div class="section-container">
+      <h2>Get in Touch</h2>
+      <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; align-items: start;">
+        <form onsubmit="handleContactForm(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+          <input type="text" placeholder="Your Name" required style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit;">
+          <input type="email" placeholder="Your Email" required style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit;">
+          <input type="tel" placeholder="Your Phone" required style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit;">
+          <textarea placeholder="Your Message" rows="5" required style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary);">
+            <h3 style="margin-bottom: 0.5rem;">📍 Location</h3>
+            <p style="color: #666;">Anaji Estate, Takoradi</p>
+          </div>
+          <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary);">
+            <h3 style="margin-bottom: 0.5rem;">📞 Phone</h3>
+            <p style="color: #666;">0531392662</p>
+          </div>
+          <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary);">
+            <h3 style="margin-bottom: 0.5rem;">📧 Email</h3>
+            <p style="color: #666;">myhairdotcom@gmaildotcom</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <p style="margin-bottom: 1rem;">© 2025 My Hair Dot Com. All rights reserved.</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+        <a href="#home" style="color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">Home</a>
+        <a href="#services" style="color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">Services</a>
+        <a href="#gallery" style="color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">Gallery</a>
+        <a href="#contact" style="color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">Contact</a>
+      </div>
+      <p style="font-size: 0.9rem; opacity: 0.6;">Made with 💖 by My Hair Dot Com Team</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
