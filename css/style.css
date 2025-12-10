@@ -24,11 +24,22 @@
 }
 
 body.dark-mode {
-  --bg: #1a1a1a;
-  --text: #f0f0f0;
-  --text-light: #b0b0b0;
+  --primary: #0088ff;
+  --secondary: #00b3ff;
+  --dark: #0a0a0a;
+  --light: #1e1e1e;
   --border: #333333;
-  --light: #2d2d2d;
+  --text: #e8e8e8;
+  --text-light: #a0a0a0;
+  --white: #1a1a1a;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode {
+  background: #0a0a0a;
+  color: #e8e8e8;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -56,9 +67,11 @@ body {
   top: 0;
   width: 100%;
   background: var(--white);
+  color: var(--text);
   box-shadow: var(--shadow);
   z-index: 1000;
   border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -768,5 +781,67 @@ footer {
   .about-stats {
     grid-template-columns: 1fr;
   }
+}
+
+/* DARK MODE OVERRIDES */
+body.dark-mode section {
+  background-blend-mode: darken;
+}
+
+body.dark-mode .trust-card,
+body.dark-mode .service-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .stylist-card,
+body.dark-mode .info-card {
+  background: var(--light);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.dark-mode .trust-card:hover,
+body.dark-mode .service-card:hover,
+body.dark-mode .testimonial-card:hover,
+body.dark-mode .stylist-card:hover {
+  background: var(--light);
+  border-color: var(--primary);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: var(--light);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--text-light);
+}
+
+body.dark-mode .form-input:focus,
+body.dark-mode .form-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 136, 255, 0.2);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: var(--text);
+}
+
+body.dark-mode p {
+  color: var(--text-light);
+}
+
+body.dark-mode .btn-secondary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: var(--primary);
+  color: var(--white);
 }
 
